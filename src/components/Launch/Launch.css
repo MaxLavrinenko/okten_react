@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    border: 1px black solid;
+    margin: 2px;
+    justify-content: space-around;
+}
+img {
+    width: 100px;
+    height: 100px;
+}
