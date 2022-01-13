@@ -9,20 +9,24 @@ const Users = () => {
     const [users, setUsers] = useState([])
     const [form, setForm] = useState({name: '', username: '', email: ''})
     const [filter, setFilter] = useState([]);
+
     useEffect(() => {
         userServices.getAll()
-            .then(value => {setFilter(value);setUsers(value)})
+            .then(value => {
+                setFilter(value);
+                setUsers(value)
+            })
     }, [])
 
     const find = (e) => {
         e.preventDefault()
         setFilter(
-        users.filter(value => {
-            return (value.name.toLowerCase().includes(form.name) &&
-                value.username.toLowerCase().includes(form.username) &&
-                value.email.toLowerCase().includes(form.email));
+            users.filter(value => {
+                return (value.name.toLowerCase().includes(form.name) &&
+                    value.username.toLowerCase().includes(form.username) &&
+                    value.email.toLowerCase().includes(form.email));
 
-        }))
+            }))
     }
     const formHandler = (e) => {
         const keyName = e.target.name;
