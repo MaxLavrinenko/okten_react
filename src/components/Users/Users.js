@@ -7,7 +7,7 @@ import User from "../User/User";
 const Users = () => {
 
     const [users, setUsers] = useState([])
-    const [resalt, setResalt] = useState([])
+    const [res, setRes] = useState([])
     const [form, setForm] = useState({name: '', username: '', email: ''})
 
     useEffect(() => {
@@ -17,13 +17,14 @@ const Users = () => {
 
     const find = (e) => {
         e.preventDefault()
-        console.log(form);
-        // users.filter(value => {
-        //     if (value.name.includes(e.target.name.value)) {
-        //         setResalt(value=>value);
-        //         console.log(resalt);
-        //     }
-        // })
+        setRes(
+        users.filter(value => {
+            if (value.name.includes(form.name)) {
+                // setRes(res.push(value))
+                console.log(res);
+            }
+        }))
+        console.log(res);
     }
     const formHendler = (e) => {
         const keyName = e.target.name;
@@ -41,6 +42,8 @@ const Users = () => {
                 </form>
             </div>
             <div>
+                {res && res.map(value =><User key={value.id}
+                                          value={value}/> )}
                 {users.map(value => <User key={value.id}
                                           value={value}/>)}
             </div>
