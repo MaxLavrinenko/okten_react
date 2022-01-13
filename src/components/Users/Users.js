@@ -17,13 +17,12 @@ const Users = () => {
 
     const find = (e) => {
         e.preventDefault()
-        setRes(
         users.filter(value => {
             if (value.name.includes(form.name)) {
                 // setRes(res.push(value))
                 console.log(res);
             }
-        }))
+        })
         console.log(res);
     }
     const formHendler = (e) => {
