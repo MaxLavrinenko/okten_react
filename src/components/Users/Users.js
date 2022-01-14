@@ -4,7 +4,7 @@ import {userService} from "../../services/User.service";
 import User from "../User/User";
 import UserDetails from "../UserDetails/UserDetails";
 import './Users.css'
-import Post from "../Post/Post";
+import Posts from "../Posts/Posts";
 
 
 const Users = () => {
@@ -23,7 +23,7 @@ const Users = () => {
             .then(value => setUser(value))
     }
     const getUserPosts = (id) => {
-        userService.getUserPosts(id)
+        userService.getUsersPosts(id)
             .then(value => setPosts(value))
     }
 
@@ -38,7 +38,7 @@ const Users = () => {
                 </div>
             </div>
             <div>
-                {posts && posts.map(value => <Post key={value.id} post={value}/>)}
+                <Posts value={posts}/>
             </div>
         </div>
     );
