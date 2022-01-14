@@ -1,6 +1,6 @@
 import {urls} from "../configs/urls";
 
-const getAll = ()=>{
+const getAll = () => {
     return fetch(urls.users)
         .then(value => value.json())
 }
