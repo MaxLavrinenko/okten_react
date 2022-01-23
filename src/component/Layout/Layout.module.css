@@ -1,0 +1,18 @@
+.header {
+    height: 70px;
+    background-color: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.header a {
+    font-size: 20px;
+    color: antiquewhite;
+}
+
+.header a[class ='active'] {
+    font-size: 30px;
+    color: orange;
+}
