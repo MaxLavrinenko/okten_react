@@ -10,7 +10,7 @@ const PhotosPage = () => {
     const {id} = useParams()
     useEffect(() => {
         userServices.getPhotoBuAlbumId(id).then(value => setPhotos(value))
-    }, [])
+    }, [id])
     return (
         <div>
             {photos.map(value => <Photo key={value.id} value={value}/>)}

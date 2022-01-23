@@ -11,7 +11,7 @@ const AlbumsPage = () => {
 
     useEffect(() => {
         userServices.getUserAlbums(id).then(value => setAlbums(value))
-    }, []);
+    }, [id]);
 
     return (
         <div>
