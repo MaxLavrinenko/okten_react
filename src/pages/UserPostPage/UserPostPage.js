@@ -9,9 +9,9 @@ const UserPostPage = () => {
     const {id} = useParams();
     const [posts, setPost] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         userService.getUserPosts(id).then(value => setPost(value))
-    },[]);
+    }, []);
 
     return (
         <div>
