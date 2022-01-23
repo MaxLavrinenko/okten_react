@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.detail {
+    max-width: 700px;
+    padding: 10px;
+}

@@ -1,0 +1,13 @@
+.header{
+    min-height: 50px;
+    background-color: dodgerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.header a{
+    font-size: 30px;
+    color: coral;
+    text-decoration: none;
+}
