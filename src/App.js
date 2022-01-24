@@ -17,7 +17,7 @@ function App() {
           <Route path={'/'} element={<HomePage/>}/>
           <Route path={'/users'} element={<UsersPage/>}>
               <Route path={':id/albums'} element={<AlbumsPage/>}>
-                  <Route path={':id'} element={<PhotosPage/>}/>
+                  <Route path={':idPhoto'} element={<PhotosPage/>}/>
               </Route>
           </Route>
           <Route path={'*'} element = {<NotFoundPage/>}/>

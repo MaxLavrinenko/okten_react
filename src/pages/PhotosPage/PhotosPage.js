@@ -7,10 +7,10 @@ import Photo from "../../component/Photo/Photo";
 
 const PhotosPage = () => {
     const [photos, setPhotos] = useState([])
-    const {id} = useParams()
+    const {idPhoto} = useParams()
     useEffect(() => {
-        userServices.getPhotoBuAlbumId(id).then(value => setPhotos(value))
-    }, [id])
+        userServices.getPhotoBuAlbumId(idPhoto).then(value => setPhotos(value))
+    }, [idPhoto])
     return (
         <div>
             {photos.map(value => <Photo key={value.id} value={value}/>)}
