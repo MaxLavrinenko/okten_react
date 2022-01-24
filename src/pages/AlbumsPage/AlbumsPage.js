@@ -16,10 +16,10 @@ const AlbumsPage = () => {
     return (
         <div>
             <div>
-                <Outlet/>
+                {albums.map(value => <Album key={value.id} value={value}/>)}
             </div>
             <div>
-                {albums.map(value => <Album key={value.id} value={value}/>)}
+                <Outlet/>
             </div>
         </div>
     );

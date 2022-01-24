@@ -7,8 +7,9 @@ const Album = ({value}) => {
     return (
         <div>
             <div>
-                <h3>{value.id}) Title: {value.title}</h3>
-                <Link to={`${value.id}`}><button>Photos</button></Link>
+                <h3>{value.id}) Title: {value.title}</h3> <Link to={`${value.id}`}><button>Photos</button></Link>
+                <hr/>
+
             </div>
         </div>
     );
