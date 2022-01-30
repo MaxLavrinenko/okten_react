@@ -56,14 +56,14 @@ function App() {
 
     return (
         <div className="App">
-            <form onSubmit={addCat} style={{display:"flex"}}>
+            <form onSubmit={addCat} style={{display: "flex"}}>
                 <label>Add Cat: <input ref={catInput} type={'text'} name={'cat'}/></label>
                 <button onClick={addCat}>Save</button>
                 <hr/>
                 <label>Add Dog: <input ref={dogInput} type={'text'} name={'dog'}/></label>
                 <button onClick={addDog}>Save</button>
             </form>
-            <div style={{display:'flex'}}>
+            <div style={{display: 'flex'}}>
                 <Cats cats={state.cats} deleteCat={deleteCat}/>
                 <hr/>
                 <Dogs dogs={state.dogs} deleteDog={deleteDog}/>
